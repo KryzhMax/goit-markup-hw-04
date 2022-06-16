@@ -36,6 +36,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -167,7 +169,6 @@ img {
 
 .hero {
   max-width: 1600px;
-  height: 600px;
   margin: auto auto;
   background-color: #2f303a;
   text-align: center;
@@ -328,6 +329,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
 .teammates:last-child {
   margin-right: 0;
 }
@@ -362,24 +364,24 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-position: center;
   align-items: center;
   background-color: var(--main-white);
-}
-
-.icon,
-.icon-clients {
   fill: var(--icon-color);
 }
-.icon:hover {
-  fill: var(--main-white);
-}
+/* .social-links-item .icon {
+  fill: var(--icon-color);
+} */
 
 .social-links-item:hover,
 .social-links-item:focus {
   background-color: var(--accent-color);
   fill: var(--main-white);
 }
+/* .social-links-item:hover .icon,
+.social-links-item:focus .icon {
+ 
+  fill: var(--main-white);
+} */
 
 .team-member {
   font-weight: 500;
@@ -513,6 +515,8 @@ img {
 .filter .current {
   background-color: var(--accent-color);
   color: var(--main-white);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .list {
@@ -526,6 +530,11 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
   width: 370px;
+}
+
+.service-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .service-item:nth-child(3n) {
@@ -577,15 +586,28 @@ img {
   align-items: center;
   gap: 30px;
 }
+.client-list-item {
+  width: calc((100% - 150px) / 6);
+}
 
 .client-list-link {
   display: flex;
   border-radius: 4px;
-  border: 1px solid #afb1b8;
-  width: 170px;
+  border: 1px solid currentColor;
+  width: 100%;
   height: 92px;
   justify-content: center;
   align-items: center;
+  outline: none;
+  color: var(--icon-color);
+}
+.icon-clients {
+  fill: currentColor;
+}
+
+.client-list-link:hover,
+.client-list-link:focus {
+  color: var(--accent-color);
 }
 
 .footer .icon {
