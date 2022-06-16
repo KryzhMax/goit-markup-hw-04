@@ -77,12 +77,12 @@ img {
 }
 
 .icon-body {
+  display: flex;
+  margin-bottom: 30px;
   width: 270px;
   height: 120px;
-  background-position: center;
   background-color: #f5f4fa;
   padding: 25px 100px;
-  align-items: center;
 }
 /* Logo */
 
@@ -145,6 +145,7 @@ img {
 }
 
 .contacts .info {
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
@@ -249,11 +250,6 @@ img {
   padding-top: 94px;
 }
 
-.icon-body {
-  display: flex;
-  margin-bottom: 30px;
-}
-
 .features .title {
   font-weight: 700;
   font-size: 14px;
@@ -323,7 +319,6 @@ img {
   width: 270px;
   background: #ffffff;
   margin-right: 30px;
-  padding-bottom: 30px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -344,7 +339,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
   gap: 10px;
 }
 /* ----------Social media---------- */
@@ -398,6 +392,7 @@ img {
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
 
   margin-top: 10px;
 }
@@ -412,6 +407,7 @@ img {
 .footer .container {
   display: flex;
   margin-left: 70px;
+  align-items: baseline;
 }
 
 .address {
@@ -445,40 +441,42 @@ img {
   flex-direction: column;
   width: 206px;
   height: 80px;
-  justify-content: center;
+  /* justify-content: center; */
+  align-items: baseline;
   margin-left: 70px;
 }
 
-.join-us span {
+.join-us b {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  align-content: center;
   color: #ffffff;
 }
 
 .join-us-list {
   display: flex;
-  width: 206px;
-  height: 80px;
   gap: 10px;
 }
 
 .join-us-item {
-  display: flex;
-  width: 44px;
-  height: 44px;
   border-radius: 50%;
-  justify-content: center;
-  align-items: center;
   background: rgba(255, 255, 255, 0.1);
 }
 
-.join-us-item:hover,
-.join-us-item:focus {
+.join-us-link {
+  display: flex;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+}
+
+.join-us-link:hover,
+.join-us-link:focus {
   background-color: var(--accent-color);
   fill: var(--main-white);
 }
@@ -560,13 +558,6 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--main-color);
-}
-
-.all-title:hover,
-.all-title:focus,
-.text-all:hover,
-.text-all:focus {
-  color: var(--accent-color);
 }
 
 .cardbox {
